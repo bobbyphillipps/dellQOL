@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#CURL='/usr/bin/curl'
+#REPOA='http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo'
+#REPOB='http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo'
+
 cp -rf ./.bashrc  ~/.bashrc
 
 less ./jtaliases.sh >> ~/.bashrc
@@ -20,9 +24,9 @@ chmod +x gitup.sh
 
 #curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/epel.repo --output /etc/yum.repos.d/epel.repo
 
-curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo -output /etc/yum.repos.d/CentOS-Base.repo
+curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo -output ~/etc/yum.repos.d/CentOS-Base.repo
 
-curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo -output /etc/yum.repos.d/epel.repo
+curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo -output ~/etc/yum.repos.d/epel.repo
 
 yum clean all
 
