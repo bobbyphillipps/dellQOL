@@ -18,9 +18,9 @@ chmod +x qolupset.sh
 
 chmod +x gitup.sh
 
-yes | cp -rf ./CentOS-Base.repo ~/etc/yum.repos.d/
+yes | cp -rf ./CentOS-Base.repo /etc/yum.repos.d/
 
-yes | cp -rf ./epel.repo ~/etc/yum.repos.d/
+yes | cp -rf ./epel.repo /etc/yum.repos.d/
 
 #curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/CentOS-Base.repo --output /etc/yum.repos.d/CentOS-Base.repo
 
