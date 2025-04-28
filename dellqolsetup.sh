@@ -14,13 +14,17 @@ chmod +x gitup.sh
 
 # yes | cp -rf ./epel.repo ~/etc/yum.repos.d/
 
-curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/CentOS-Base.repo --output /etc/yum.repos.d/CentOS-Base.repo
+#curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/CentOS-Base.repo --output /etc/yum.repos.d/CentOS-Base.repo
 
-curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/epel.repo --output /etc/yum.repos.d/epel.repo
+#curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/epel.repo --output /etc/yum.repos.d/epel.repo
+
+curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo –output /etc/yum.repos.d/CentOS-Base.repo
+
+curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo –output /etc/yum.repos.d/epel.repo
 
 yum clean all
 
-yum upgrade
+yum -y update
 
 yum install -y terminator
 
