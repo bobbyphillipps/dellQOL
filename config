@@ -1,0 +1,181 @@
+[global_config]
+  window_state = fullscreen
+[keybindings]
+  broadcast_group = <Shift><Super>a
+  broadcast_off = <Shift><Super>d
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 12
+    foreground_color = "#00ff00"
+  [[large]]
+    use_system_font = False
+    visible_bell = True
+    urgent_bell = True
+    foreground_color = "#00ff00"
+    font = Monospace 16
+    audible_bell = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = large
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[tabs]]
+    [[[child0]]]
+      position = 0:25
+      type = Window
+      order = 0
+      parent = ""
+      size = 1916, 998
+    [[[child1]]]
+      labels = 701.1, 701.2
+      type = Notebook
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 479
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child3]]]
+      position = 955
+      type = HPaned
+      order = 0
+      parent = child2
+    [[[child14]]]
+      position = 825
+      type = HPaned
+      order = 1
+      parent = child10
+    [[[child6]]]
+      position = 955
+      type = HPaned
+      order = 1
+      parent = child2
+    [[[child9]]]
+      position = 1611
+      type = HPaned
+      order = 1
+      parent = child1
+    [[[terminal12]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 0
+      parent = child11
+    [[[child10]]]
+      position = 479
+      type = VPaned
+      order = 0
+      parent = child9
+    [[[terminal13]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 1
+      parent = child11
+    [[[child11]]]
+      position = 825
+      type = HPaned
+      order = 0
+      parent = child10
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child3
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child6
+    [[[terminal16]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 1
+      parent = child14
+    [[[terminal8]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child6
+    [[[terminal17]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child9
+    [[[terminal15]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 0
+      parent = child14
+  [[4]]
+    [[[child0]]]
+      position = 0:25
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1002
+    [[[child1]]]
+      position = 1559
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 501
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child3]]]
+      position = 791
+      type = HPaned
+      order = 0
+      parent = child2
+    [[[child6]]]
+      position = 791
+      type = HPaned
+      order = 1
+      parent = child2
+    [[[terminal5]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 0
+      parent = child3
+    [[[terminal7]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 0
+      parent = child6
+    [[[terminal9]]]
+      profile = default
+      command = /usr/bin/nc -l -k 8005
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal8]]]
+      profile = default
+      group = All
+      type = Terminal
+      order = 1
+      parent = child6
+      command = ""
+[plugins]

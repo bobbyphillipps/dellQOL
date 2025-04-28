@@ -1,0 +1,17 @@
+qol
+	Update Dell Quality of Life "qol" tools (includes these shortcuts)
+
+ss 
+	Type 'ss' and then the last two portions of an IP address to log into a sled
+
+id
+	Type 'id' and then the last two portions of an IP address to flash the red light on that sled for ID purposes
+
+ipp
+	List all the connected/booted sleds IP addresses (already in terminator right-side window by default)
+
+resfix
+	Fix the VM resolution to 1920x1080 (restart required)
+
+snooze
+	Snooze the "Update Your VM" window for 14 days
