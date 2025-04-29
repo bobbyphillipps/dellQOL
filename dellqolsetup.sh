@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#CURL='/usr/bin/curl'
-#REPOA='http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo'
-#REPOB='http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo'
-#OUTPUTA='--output ~/etc/yum.repos.d/CentOS-Base.repo'
-#OUTPUTB='--output ~/etc/yum.repos.d/epel.repo'
-
 cp -rf ./.bashrc  ~/.bashrc
 
 less ./jtaliases.sh >> ~/.bashrc
@@ -19,24 +13,16 @@ chmod +x qolupset.sh
 chmod +x gitup.sh
 
 yes | cp -rf ./CentOS-Base.repo /etc/yum.repos.d/
+yes | cp -rf ./CentOS-Base.repo ~/etc/yum.repos.d/
 
 yes | cp -rf ./epel.repo /etc/yum.repos.d/
-
-#curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/CentOS-Base.repo --output /etc/yum.repos.d/CentOS-Base.repo
-
-#curl https://www.mark-gilbert.co.uk/wp-content/uploads/2021/08/epel.repo --output /etc/yum.repos.d/epel.repo
-
-#curl http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/CentOS-Base.repo\' --output ~/etc/yum.repos.d/CentOS-Base.repo'
-#$CURL $REPOA $OUTPUTA
-#$CURL $REPOB $OUTPUTB
-
-#echo 'curl \'http://mark-gilbert-co-uk.s3-website-eu-west-1.amazonaws.com/epel.repo\' --output ~/etc/yum.repos.d/epel.repo'
+yes | cp -rf ./epel.repo ~/etc/yum.repos.d/
 
 yum clean all
 
 yum -y update
 
-yum install -y terminator
+yum install -y --nogpgcheck terminator
 
 mkdir -p ~/.config/terminator
 
