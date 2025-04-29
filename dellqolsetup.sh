@@ -20,7 +20,7 @@ yes | cp -rf ./epel.repo ~/etc/yum.repos.d/
 
 yum clean all
 
-yum -y update
+#yum -y update
 
 yum install -y --nogpgcheck terminator
 
